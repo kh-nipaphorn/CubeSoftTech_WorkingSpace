@@ -1767,6 +1767,8 @@ TC-LEAVE-EMP-020 P_Add_Half_Of_Day_Leave
     Click Element    xpath=/html/body/div[3]/div[2]/div/div[2]/div[2]/form/div[3]/div[2]/select/option[4]
     ${check_hour}    Get Text    xpath=/html/body/div[3]/div[2]/div/div[2]/div[2]/form/div[3]/div[2]/select/option[4]
     Should Be True    '${check_hour}' == '3'
+    ${check_hour_value}=    Get Value    xpath=/html/body/div[3]/div[2]/div/div[2]/div[2]/form/div[3]/div[2]/select/option[4]
+    ${split_value}=    Remove String    ${check_hour_value}    0
 
     # input & check half of day leave
     Click Element    xpath=/html/body/div[3]/div[2]/div/div[2]/div[2]/form/div[4]/div/div/label[1]   # Morning
@@ -1830,8 +1832,7 @@ TC-LEAVE-EMP-020 P_Add_Half_Of_Day_Leave
     # Amount the day
     ${check_AmountOfTheDay}=    Get Table Cell    ${table}    1    7
     ${check_AmountOfTheDay_data}=    Get Table Cell    ${table}    2    7
-    ${split}=    Remove String    ${check_AmountOfTheDay_data}    ${check_amount}
-    Should Be True    '${check_AmountOfTheDay}' == 'Amount the day' and '${check_AmountOfTheDay_data}' == '${check_amount}${split}'
+    Should Be True    '${check_AmountOfTheDay}' == 'Amount the day' and '${check_AmountOfTheDay_data}' == '${check_amount}${split_value}'
 
     # Status
     ${check_LeaveStatus}=    Get Table Cell    ${table}    1    8
@@ -1841,5 +1842,7 @@ TC-LEAVE-EMP-020 P_Add_Half_Of_Day_Leave
     Sleep    10s
     Capture Page Screenshot    3_Add_Vacation_Leave.png
     Log To Console    This Test Case Is Pass
+
+    #---------------- Leave ID 3745 --------------------#
 
     Close All Browsers
