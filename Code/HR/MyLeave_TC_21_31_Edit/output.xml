@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210906 03:16:07.112" rpa="false">
+<suite id="s1" name="MyLeave TC 21 31 Edit" source="D:\CO-OP\CubeSoftTech_WorkingSpace\Code\HR\MyLeave_TC_21_31_Edit\MyLeave_TC_21_31_Edit.robot">
+<test id="s1-t1" name="TC-LEAVE-EMP-023 P_Edit_Description_Of_Leave">
+<kw name="Employee Login Success">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210906 03:16:07.287" level="INFO">Opening browser 'chrome' to base url 'http://uat.cubesofttech.com/'.</msg>
+<status status="PASS" starttime="20210906 03:16:07.287" endtime="20210906 03:16:08.877"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210906 03:16:08.877" endtime="20210906 03:16:09.052"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Cube SoftTech : Login</arg>
+</arguments>
+<msg timestamp="20210906 03:16:09.055" level="INFO">Page title is 'Cube SoftTech : Login'.</msg>
+<status status="PASS" starttime="20210906 03:16:09.052" endtime="20210906 03:16:09.055"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Login to your account</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:09.055" endtime="20210906 03:16:09.066"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${it_login}</arg>
+</arguments>
+<msg timestamp="20210906 03:16:09.067" level="INFO">Typing text 'test_hr_role' into text field 'username'.</msg>
+<status status="PASS" starttime="20210906 03:16:09.067" endtime="20210906 03:16:09.130"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20210906 03:16:09.131" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20210906 03:16:09.163" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210906 03:16:09.200" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210906 03:16:09.130" endtime="20210906 03:16:09.200"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=submit myBtn</arg>
+</arguments>
+<msg timestamp="20210906 03:16:09.200" level="INFO">Clicking button 'id=submit myBtn'.</msg>
+<status status="PASS" starttime="20210906 03:16:09.200" endtime="20210906 03:16:26.037"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>check in</arg>
+</arguments>
+<msg timestamp="20210906 03:16:26.041" level="INFO">Page title is 'check in'.</msg>
+<status status="PASS" starttime="20210906 03:16:26.037" endtime="20210906 03:16:26.041"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:26.041" endtime="20210906 03:16:26.052"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${it_login}</arg>
+</arguments>
+<msg timestamp="20210906 03:16:26.062" level="INFO">Current page contains text 'test_hr_role'.</msg>
+<status status="PASS" starttime="20210906 03:16:26.053" endtime="20210906 03:16:26.062"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210906 03:16:31.063" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210906 03:16:26.063" endtime="20210906 03:16:31.063"></status>
+</kw>
+<status status="PASS" starttime="20210906 03:16:07.287" endtime="20210906 03:16:31.063"></status>
+</kw>
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:31.065" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_hr_role"]'.</msg>
+<status status="PASS" starttime="20210906 03:16:31.064" endtime="20210906 03:16:31.737"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 03:16:31.740" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 03:16:31.737" endtime="20210906 03:16:31.740"></status>
+</kw>
+<status status="PASS" starttime="20210906 03:16:31.064" endtime="20210906 03:16:31.740"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 03:16:31.741" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 03:16:31.740" endtime="20210906 03:16:32.036"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.038" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.036" endtime="20210906 03:16:32.038"></status>
+</kw>
+<status status="PASS" starttime="20210906 03:16:31.740" endtime="20210906 03:16:32.038"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:32.039" endtime="20210906 03:16:32.049"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="leaveTypes"]/label[2]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.049" level="INFO">Clicking element 'xpath=//*[@id="leaveTypes"]/label[2]'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.049" endtime="20210906 03:16:32.092"></status>
+</kw>
+<kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<arguments>
+<arg>leaveType</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.093" level="INFO">Verifying radio button 'leaveType' has selection '2'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.093" endtime="20210906 03:16:32.124"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_from</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.125" level="INFO">Clicking element 'id=date_from'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.125" endtime="20210906 03:16:32.173"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.173" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.173" endtime="20210906 03:16:32.207"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.207" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.207" endtime="20210906 03:16:32.244"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[1]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.245" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[1]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.245" endtime="20210906 03:16:32.290"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_to</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.290" level="INFO">Clicking element 'id=date_to'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.290" endtime="20210906 03:16:32.331"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.332" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.332" endtime="20210906 03:16:32.360"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.360" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.360" endtime="20210906 03:16:32.394"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[1]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.395" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[1]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.394" endtime="20210906 03:16:32.431"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_from"]</arg>
+</arguments>
+<assign>
+<var>${check_dateFrom}</var>
+</assign>
+<msg timestamp="20210906 03:16:32.444" level="INFO">${check_dateFrom} = 01-09-2021</msg>
+<status status="PASS" starttime="20210906 03:16:32.431" endtime="20210906 03:16:32.444"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_to"]</arg>
+</arguments>
+<assign>
+<var>${check_dateTo}</var>
+</assign>
+<msg timestamp="20210906 03:16:32.453" level="INFO">${check_dateTo} = 01-09-2021</msg>
+<status status="PASS" starttime="20210906 03:16:32.444" endtime="20210906 03:16:32.454"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${year}</var>
+</assign>
+<msg timestamp="20210906 03:16:32.454" level="INFO">${year} = 2021</msg>
+<status status="PASS" starttime="20210906 03:16:32.454" endtime="20210906 03:16:32.454"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_dateFrom}' == '01-09-''${year}' and '${check_dateTo}' == '01-09-''${year}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:32.454" endtime="20210906 03:16:32.455"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="amount"]</arg>
+</arguments>
+<assign>
+<var>${check_amount}</var>
+</assign>
+<msg timestamp="20210906 03:16:32.464" level="INFO">${check_amount} = 1</msg>
+<status status="PASS" starttime="20210906 03:16:32.455" endtime="20210906 03:16:32.464"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_amount}' == '1'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:32.465" endtime="20210906 03:16:32.465"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=description</arg>
+<arg>TC-LEAVE-020</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.465" level="INFO">Typing text 'TC-LEAVE-020' into text field 'id=description'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.465" endtime="20210906 03:16:32.523"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="description"]</arg>
+</arguments>
+<assign>
+<var>${check_description}</var>
+</assign>
+<msg timestamp="20210906 03:16:32.535" level="INFO">${check_description} = TC-LEAVE-020</msg>
+<status status="PASS" starttime="20210906 03:16:32.523" endtime="20210906 03:16:32.535"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_description}' == 'TC-LEAVE-020'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:32.536" endtime="20210906 03:16:32.536"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=reason</arg>
+<arg>เป็นส่วนหนึ่งในการทดสอบ</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.536" level="INFO">Typing text 'เป็นส่วนหนึ่งในการทดสอบ' into text field 'id=reason'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.536" endtime="20210906 03:16:32.596"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="reason"]</arg>
+</arguments>
+<assign>
+<var>${check_reason}</var>
+</assign>
+<msg timestamp="20210906 03:16:32.608" level="INFO">${check_reason} = เป็นส่วนหนึ่งในการทดสอบ</msg>
+<status status="PASS" starttime="20210906 03:16:32.597" endtime="20210906 03:16:32.608"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_reason}' == 'เป็นส่วนหนึ่งในการทดสอบ'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:32.608" endtime="20210906 03:16:32.609"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="approver"]/option[5]</arg>
+</arguments>
+<assign>
+<var>${check_approver}</var>
+</assign>
+<msg timestamp="20210906 03:16:32.632" level="INFO">${check_approver} = วีระวัฒน์ ภูมิพัฒนพงศ์</msg>
+<status status="PASS" starttime="20210906 03:16:32.609" endtime="20210906 03:16:32.633"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>"${check_approver}" == "${hr_name}"</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:32.633" endtime="20210906 03:16:32.634"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="status"]/option[1]</arg>
+</arguments>
+<assign>
+<var>${check_status}</var>
+</assign>
+<msg timestamp="20210906 03:16:32.651" level="INFO">${check_status} = Wait for approve</msg>
+<status status="PASS" starttime="20210906 03:16:32.634" endtime="20210906 03:16:32.651"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_status}' == 'Wait for approve'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:32.651" endtime="20210906 03:16:32.652"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.652" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.652" endtime="20210906 03:16:32.881"></status>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<doc>Waits until the current URL is ``expected``.</doc>
+<arguments>
+<arg>http://uat.cubesofttech.com/leavecalendar</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:32.882" endtime="20210906 03:16:32.887"></status>
+</kw>
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:32.887" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_hr_role"]'.</msg>
+<status status="PASS" starttime="20210906 03:16:32.887" endtime="20210906 03:16:33.487"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 03:16:33.489" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 03:16:33.487" endtime="20210906 03:16:33.490"></status>
+</kw>
+<status status="PASS" starttime="20210906 03:16:32.887" endtime="20210906 03:16:33.490"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${currentDate}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.491" level="INFO">${currentDate} = 06-09-2021</msg>
+<status status="PASS" starttime="20210906 03:16:33.490" endtime="20210906 03:16:33.491"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%H:</arg>
+</arguments>
+<assign>
+<var>${currentTime}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.492" level="INFO">${currentTime} = 03:</msg>
+<status status="PASS" starttime="20210906 03:16:33.491" endtime="20210906 03:16:33.492"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${check_submit}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.523" level="INFO">${check_submit} = Submit date</msg>
+<status status="PASS" starttime="20210906 03:16:33.492" endtime="20210906 03:16:33.523"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>2</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${check_submit_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.555" level="INFO">${check_submit_data} = 06-09-2021 03:11</msg>
+<status status="PASS" starttime="20210906 03:16:33.524" endtime="20210906 03:16:33.555"></status>
+</kw>
+<kw name="Remove String" library="String">
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<arguments>
+<arg>${check_submit_data}</arg>
+<arg>${currentDate}</arg>
+<arg>${currentTime}</arg>
+<arg>${space}</arg>
+</arguments>
+<assign>
+<var>${split}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.555" level="INFO">${split} = 11</msg>
+<status status="PASS" starttime="20210906 03:16:33.555" endtime="20210906 03:16:33.555"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_submit}' == 'Submit date' and '${check_submit_data}' == '${currentDate} ${currentTime}${split}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:33.555" endtime="20210906 03:16:33.556"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${check_applicant}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.577" level="INFO">${check_applicant} = The applicant</msg>
+<status status="PASS" starttime="20210906 03:16:33.556" endtime="20210906 03:16:33.577"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${check_applicant_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.605" level="INFO">${check_applicant_data} = test_hr_role</msg>
+<status status="PASS" starttime="20210906 03:16:33.577" endtime="20210906 03:16:33.605"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_applicant}' == 'The applicant' and '${check_applicant_data}' == '${it_login}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:33.606" endtime="20210906 03:16:33.606"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${check_typeOfLeave}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.629" level="INFO">${check_typeOfLeave} = Type of leave</msg>
+<status status="PASS" starttime="20210906 03:16:33.606" endtime="20210906 03:16:33.629"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${check_typeOfLeave_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.653" level="INFO">${check_typeOfLeave_data} = ลาอื่นๆ</msg>
+<status status="PASS" starttime="20210906 03:16:33.630" endtime="20210906 03:16:33.653"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_typeOfLeave}' == 'Type of leave' and '${check_typeOfLeave_data}' == 'ลาอื่นๆ'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:33.653" endtime="20210906 03:16:33.654"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>${check_StartDate}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.675" level="INFO">${check_StartDate} = Start date (Since)</msg>
+<status status="PASS" starttime="20210906 03:16:33.654" endtime="20210906 03:16:33.675"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>${check_StartDate_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.700" level="INFO">${check_StartDate_data} = 01-09-2021</msg>
+<status status="PASS" starttime="20210906 03:16:33.676" endtime="20210906 03:16:33.700"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_StartDate}' == 'Start date (Since)' and '${check_StartDate_data}' == '${check_dateFrom}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:33.700" endtime="20210906 03:16:33.701"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>6</arg>
+</arguments>
+<assign>
+<var>${check_EndDate}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.722" level="INFO">${check_EndDate} = End date (Until)</msg>
+<status status="PASS" starttime="20210906 03:16:33.701" endtime="20210906 03:16:33.722"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>6</arg>
+</arguments>
+<assign>
+<var>${check_EndDate_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.750" level="INFO">${check_EndDate_data} = 01-09-2021</msg>
+<status status="PASS" starttime="20210906 03:16:33.722" endtime="20210906 03:16:33.750"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_EndDate}' == 'End date (Until)' and '${check_EndDate_data}' == '${check_dateTo}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:33.750" endtime="20210906 03:16:33.750"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>7</arg>
+</arguments>
+<assign>
+<var>${check_AmountOfTheDay}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.771" level="INFO">${check_AmountOfTheDay} = Amount the day</msg>
+<status status="PASS" starttime="20210906 03:16:33.750" endtime="20210906 03:16:33.771"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>7</arg>
+</arguments>
+<assign>
+<var>${check_AmountOfTheDay_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.798" level="INFO">${check_AmountOfTheDay_data} = 1.000</msg>
+<status status="PASS" starttime="20210906 03:16:33.772" endtime="20210906 03:16:33.798"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_AmountOfTheDay}' == 'Amount the day' and '${check_AmountOfTheDay_data}' == '${check_amount}.000'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:33.798" endtime="20210906 03:16:33.799"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${check_LeaveStatus}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.820" level="INFO">${check_LeaveStatus} = Status</msg>
+<status status="PASS" starttime="20210906 03:16:33.799" endtime="20210906 03:16:33.820"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${check_LeaveStatus_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:33.844" level="INFO">${check_LeaveStatus_data} = Waiting for approve</msg>
+<status status="PASS" starttime="20210906 03:16:33.820" endtime="20210906 03:16:33.844"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_LeaveStatus}' == 'Status' and '${check_LeaveStatus_data}' == 'Waiting for approve'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:33.845" endtime="20210906 03:16:33.845"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210906 03:16:43.846" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210906 03:16:33.845" endtime="20210906 03:16:43.846"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>23_1_Before_Edit_Description_Of_Leave.png</arg>
+</arguments>
+<msg timestamp="20210906 03:16:43.962" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="23_1_Before_Edit_Description_Of_Leave.png"&gt;&lt;img src="23_1_Before_Edit_Description_Of_Leave.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 03:16:43.848" endtime="20210906 03:16:43.962"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${check_Leave_ID}</var>
+</assign>
+<msg timestamp="20210906 03:16:43.995" level="INFO">${check_Leave_ID} = Leave ID</msg>
+<status status="PASS" starttime="20210906 03:16:43.963" endtime="20210906 03:16:43.995"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${check_LeaveS_ID_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:44.026" level="INFO">${check_LeaveS_ID_data} = 3814</msg>
+<status status="PASS" starttime="20210906 03:16:43.995" endtime="20210906 03:16:44.026"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_Leave_ID}' == 'Leave ID'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:44.026" endtime="20210906 03:16:44.026"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@href="LeaveEdit?id=${check_LeaveS_ID_data}"]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:44.027" level="INFO">Clicking element 'xpath=//*[@href="LeaveEdit?id=3814"]'.</msg>
+<status status="PASS" starttime="20210906 03:16:44.027" endtime="20210906 03:16:44.309"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>id=description</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:44.309" endtime="20210906 03:16:44.338"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=description</arg>
+<arg>TC-LEAVE-023</arg>
+</arguments>
+<msg timestamp="20210906 03:16:44.339" level="INFO">Typing text 'TC-LEAVE-023' into text field 'id=description'.</msg>
+<status status="PASS" starttime="20210906 03:16:44.339" endtime="20210906 03:16:44.386"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="description"]</arg>
+</arguments>
+<assign>
+<var>${check_description}</var>
+</assign>
+<msg timestamp="20210906 03:16:44.400" level="INFO">${check_description} = TC-LEAVE-023</msg>
+<status status="PASS" starttime="20210906 03:16:44.387" endtime="20210906 03:16:44.400"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_description}' == 'TC-LEAVE-023'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:44.400" endtime="20210906 03:16:44.401"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:44.401" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 03:16:44.401" endtime="20210906 03:16:45.103"></status>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<doc>Waits until the current URL is ``expected``.</doc>
+<arguments>
+<arg>http://uat.cubesofttech.com/leave_list</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:45.103" endtime="20210906 03:16:45.108"></status>
+</kw>
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 03:16:45.108" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_hr_role"]'.</msg>
+<status status="PASS" starttime="20210906 03:16:45.108" endtime="20210906 03:16:45.733"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 03:16:45.738" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 03:16:45.733" endtime="20210906 03:16:45.738"></status>
+</kw>
+<status status="PASS" starttime="20210906 03:16:45.108" endtime="20210906 03:16:45.738"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${check_applicant}</var>
+</assign>
+<msg timestamp="20210906 03:16:45.774" level="INFO">${check_applicant} = The applicant</msg>
+<status status="PASS" starttime="20210906 03:16:45.738" endtime="20210906 03:16:45.774"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${check_applicant_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:45.807" level="INFO">${check_applicant_data} = test_hr_role</msg>
+<status status="PASS" starttime="20210906 03:16:45.774" endtime="20210906 03:16:45.807"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_applicant}' == 'The applicant' and '${check_applicant_data}' == '${it_login}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:45.808" endtime="20210906 03:16:45.808"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${check_typeOfLeave}</var>
+</assign>
+<msg timestamp="20210906 03:16:45.834" level="INFO">${check_typeOfLeave} = Type of leave</msg>
+<status status="PASS" starttime="20210906 03:16:45.808" endtime="20210906 03:16:45.834"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${check_typeOfLeave_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:45.861" level="INFO">${check_typeOfLeave_data} = ลาอื่นๆ</msg>
+<status status="PASS" starttime="20210906 03:16:45.834" endtime="20210906 03:16:45.861"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_typeOfLeave}' == 'Type of leave' and '${check_typeOfLeave_data}' == 'ลาอื่นๆ'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:45.861" endtime="20210906 03:16:45.862"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>${check_StartDate}</var>
+</assign>
+<msg timestamp="20210906 03:16:45.886" level="INFO">${check_StartDate} = Start date (Since)</msg>
+<status status="PASS" starttime="20210906 03:16:45.862" endtime="20210906 03:16:45.886"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>${check_StartDate_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:45.913" level="INFO">${check_StartDate_data} = 01-09-2021</msg>
+<status status="PASS" starttime="20210906 03:16:45.887" endtime="20210906 03:16:45.913"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_StartDate}' == 'Start date (Since)' and '${check_StartDate_data}' == '${check_dateFrom}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:45.913" endtime="20210906 03:16:45.914"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>6</arg>
+</arguments>
+<assign>
+<var>${check_EndDate}</var>
+</assign>
+<msg timestamp="20210906 03:16:45.938" level="INFO">${check_EndDate} = End date (Until)</msg>
+<status status="PASS" starttime="20210906 03:16:45.914" endtime="20210906 03:16:45.938"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>6</arg>
+</arguments>
+<assign>
+<var>${check_EndDate_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:45.965" level="INFO">${check_EndDate_data} = 01-09-2021</msg>
+<status status="PASS" starttime="20210906 03:16:45.938" endtime="20210906 03:16:45.965"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_EndDate}' == 'End date (Until)' and '${check_EndDate_data}' == '${check_dateTo}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:45.965" endtime="20210906 03:16:45.966"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>7</arg>
+</arguments>
+<assign>
+<var>${check_AmountOfTheDay}</var>
+</assign>
+<msg timestamp="20210906 03:16:45.991" level="INFO">${check_AmountOfTheDay} = Amount the day</msg>
+<status status="PASS" starttime="20210906 03:16:45.966" endtime="20210906 03:16:45.991"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>7</arg>
+</arguments>
+<assign>
+<var>${check_AmountOfTheDay_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:46.019" level="INFO">${check_AmountOfTheDay_data} = 1.000</msg>
+<status status="PASS" starttime="20210906 03:16:45.991" endtime="20210906 03:16:46.019"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_AmountOfTheDay}' == 'Amount the day' and '${check_AmountOfTheDay_data}' == '${check_amount}.000'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:46.020" endtime="20210906 03:16:46.020"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${check_LeaveStatus}</var>
+</assign>
+<msg timestamp="20210906 03:16:46.045" level="INFO">${check_LeaveStatus} = Status</msg>
+<status status="PASS" starttime="20210906 03:16:46.021" endtime="20210906 03:16:46.046"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>3</arg>
+<arg>8</arg>
+</arguments>
+<assign>
+<var>${check_LeaveStatus_data}</var>
+</assign>
+<msg timestamp="20210906 03:16:46.073" level="INFO">${check_LeaveStatus_data} = Waiting for approve</msg>
+<status status="PASS" starttime="20210906 03:16:46.046" endtime="20210906 03:16:46.073"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_LeaveStatus}' == 'Status' and '${check_LeaveStatus_data}' == 'Waiting for approve'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:46.073" endtime="20210906 03:16:46.074"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20210906 03:16:56.075" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20210906 03:16:46.074" endtime="20210906 03:16:56.075"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>23_2_After_Edit_Description_Of_Leave.png</arg>
+</arguments>
+<msg timestamp="20210906 03:16:56.193" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="23_2_After_Edit_Description_Of_Leave.png"&gt;&lt;img src="23_2_After_Edit_Description_Of_Leave.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 03:16:56.076" endtime="20210906 03:16:56.193"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is Pass</arg>
+</arguments>
+<status status="PASS" starttime="20210906 03:16:56.194" endtime="20210906 03:16:56.194"></status>
+</kw>
+<status status="PASS" starttime="20210906 03:16:07.286" endtime="20210906 03:16:56.195" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210906 03:16:07.114" endtime="20210906 03:16:56.196"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="MyLeave TC 21 31 Edit">MyLeave TC 21 31 Edit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

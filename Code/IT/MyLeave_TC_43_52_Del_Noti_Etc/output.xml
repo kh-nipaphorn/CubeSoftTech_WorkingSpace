@@ -1,0 +1,2056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210906 01:58:42.866" rpa="false">
+<suite id="s1" name="MyLeave TC 43 51 etc" source="D:\CO-OP\CubeSoftTech_WorkingSpace\Code\MyLeave_TC_43_52_Del_Noti_Etc\MyLeave_TC_43_51_etc.robot">
+<test id="s1-t1" name="Login_Success">
+<kw name="Employee Login Success">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210906 01:58:43.030" level="INFO">Opening browser 'chrome' to base url 'http://uat.cubesofttech.com/'.</msg>
+<status status="PASS" starttime="20210906 01:58:43.029" endtime="20210906 01:58:44.673"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210906 01:58:44.673" endtime="20210906 01:58:44.784"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Cube SoftTech : Login</arg>
+</arguments>
+<msg timestamp="20210906 01:58:44.788" level="INFO">Page title is 'Cube SoftTech : Login'.</msg>
+<status status="PASS" starttime="20210906 01:58:44.784" endtime="20210906 01:58:44.788"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Login to your account</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:58:44.788" endtime="20210906 01:58:44.798"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${it_login}</arg>
+</arguments>
+<msg timestamp="20210906 01:58:44.798" level="INFO">Typing text 'test_it_roles' into text field 'username'.</msg>
+<status status="PASS" starttime="20210906 01:58:44.798" endtime="20210906 01:58:44.880"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20210906 01:58:44.880" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20210906 01:58:44.912" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210906 01:58:44.953" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210906 01:58:44.880" endtime="20210906 01:58:44.954"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id=submit myBtn</arg>
+</arguments>
+<msg timestamp="20210906 01:58:44.954" level="INFO">Clicking button 'id=submit myBtn'.</msg>
+<status status="PASS" starttime="20210906 01:58:44.954" endtime="20210906 01:59:02.054"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>check in</arg>
+</arguments>
+<msg timestamp="20210906 01:59:02.057" level="INFO">Page title is 'check in'.</msg>
+<status status="PASS" starttime="20210906 01:59:02.054" endtime="20210906 01:59:02.057"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Welcome</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:02.057" endtime="20210906 01:59:02.068"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${it_login}</arg>
+</arguments>
+<msg timestamp="20210906 01:59:02.078" level="INFO">Current page contains text 'test_it_roles'.</msg>
+<status status="PASS" starttime="20210906 01:59:02.068" endtime="20210906 01:59:02.078"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210906 01:59:07.078" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210906 01:59:02.078" endtime="20210906 01:59:07.078"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:58:43.029" endtime="20210906 01:59:07.078"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Login Pass</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:07.078" endtime="20210906 01:59:07.079"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:58:43.028" endtime="20210906 01:59:07.079" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TC-LEAVE-EMP-043 N_Delete">
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:07.081" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:07.081" endtime="20210906 01:59:07.792"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:07.798" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:07.792" endtime="20210906 01:59:07.798"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:07.080" endtime="20210906 01:59:07.799"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:07.799" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 01:59:07.799" endtime="20210906 01:59:08.080"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.082" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.080" endtime="20210906 01:59:08.083"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:07.799" endtime="20210906 01:59:08.083"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:08.083" endtime="20210906 01:59:08.093"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="leaveTypes"]/label[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.094" level="INFO">Clicking element 'xpath=//*[@id="leaveTypes"]/label[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.094" endtime="20210906 01:59:08.134"></status>
+</kw>
+<kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<arguments>
+<arg>leaveType</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.136" level="INFO">Verifying radio button 'leaveType' has selection '2'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.136" endtime="20210906 01:59:08.165"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_from</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.165" level="INFO">Clicking element 'id=date_from'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.165" endtime="20210906 01:59:08.214"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.214" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.214" endtime="20210906 01:59:08.248"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.248" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.248" endtime="20210906 01:59:08.283"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.284" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.284" endtime="20210906 01:59:08.326"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_to</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.327" level="INFO">Clicking element 'id=date_to'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.327" endtime="20210906 01:59:08.368"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.369" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.369" endtime="20210906 01:59:08.398"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.399" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.399" endtime="20210906 01:59:08.432"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.433" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.433" endtime="20210906 01:59:08.471"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_from"]</arg>
+</arguments>
+<assign>
+<var>${check_dateFrom}</var>
+</assign>
+<msg timestamp="20210906 01:59:08.489" level="INFO">${check_dateFrom} = 08-09-2021</msg>
+<status status="PASS" starttime="20210906 01:59:08.472" endtime="20210906 01:59:08.489"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_to"]</arg>
+</arguments>
+<assign>
+<var>${check_dateTo}</var>
+</assign>
+<msg timestamp="20210906 01:59:08.501" level="INFO">${check_dateTo} = 08-09-2021</msg>
+<status status="PASS" starttime="20210906 01:59:08.489" endtime="20210906 01:59:08.501"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${year}</var>
+</assign>
+<msg timestamp="20210906 01:59:08.501" level="INFO">${year} = 2021</msg>
+<status status="PASS" starttime="20210906 01:59:08.501" endtime="20210906 01:59:08.501"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_dateFrom}' == '08-09-''${year}' and '${check_dateTo}' == '08-09-''${year}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:08.501" endtime="20210906 01:59:08.502"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=amount</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.502" level="INFO">Typing text '1' into text field 'id=amount'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.502" endtime="20210906 01:59:08.552"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=description</arg>
+<arg>Delete</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.552" level="INFO">Typing text 'Delete' into text field 'id=description'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.552" endtime="20210906 01:59:08.604"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="description"]</arg>
+</arguments>
+<assign>
+<var>${check_description}</var>
+</assign>
+<msg timestamp="20210906 01:59:08.615" level="INFO">${check_description} = Delete</msg>
+<status status="PASS" starttime="20210906 01:59:08.604" endtime="20210906 01:59:08.615"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_description}' == 'Delete'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:08.615" endtime="20210906 01:59:08.616"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.616" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.616" endtime="20210906 01:59:08.942"></status>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<doc>Waits until the current URL is ``expected``.</doc>
+<arguments>
+<arg>http://uat.cubesofttech.com/leavecalendar</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:08.942" endtime="20210906 01:59:08.947"></status>
+</kw>
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:08.948" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:08.948" endtime="20210906 01:59:09.608"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:09.611" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:09.608" endtime="20210906 01:59:09.612"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:08.948" endtime="20210906 01:59:09.612"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${check_Leave_ID}</var>
+</assign>
+<msg timestamp="20210906 01:59:09.646" level="INFO">${check_Leave_ID} = Leave ID</msg>
+<status status="PASS" starttime="20210906 01:59:09.612" endtime="20210906 01:59:09.646"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${check_LeaveS_ID_data}</var>
+</assign>
+<msg timestamp="20210906 01:59:09.680" level="INFO">${check_LeaveS_ID_data} = 3779</msg>
+<status status="PASS" starttime="20210906 01:59:09.647" endtime="20210906 01:59:09.680"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_Leave_ID}' == 'Leave ID'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:09.680" endtime="20210906 01:59:09.681"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>43_1_BeforeDelete.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:09.821" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="43_1_BeforeDelete.png"&gt;&lt;img src="43_1_BeforeDelete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:09.681" endtime="20210906 01:59:09.821"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[3]/div[1]/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210906 01:59:09.822" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[1]/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210906 01:59:09.822" endtime="20210906 01:59:09.857"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[3]/div[1]/div/ul/li[2]/ul/li/a</arg>
+</arguments>
+<msg timestamp="20210906 01:59:09.858" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[1]/div/ul/li[2]/ul/li/a'.</msg>
+<status status="PASS" starttime="20210906 01:59:09.858" endtime="20210906 01:59:10.243"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Check All Calendar</arg>
+</arguments>
+<msg timestamp="20210906 01:59:10.252" level="INFO">Page title is 'Check All Calendar'.</msg>
+<status status="PASS" starttime="20210906 01:59:10.244" endtime="20210906 01:59:10.253"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210906 01:59:15.253" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210906 01:59:10.253" endtime="20210906 01:59:15.253"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div[3]/div[2]/div/div[2]/form/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/table/tbody/tr/td/div/div/div[2]/div[2]/table/tbody/tr[1]/td[3]/a/div/span[2]/i</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:15.253" endtime="20210906 01:59:15.269"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210906 01:59:20.270" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210906 01:59:15.269" endtime="20210906 01:59:20.270"></status>
+</kw>
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:20.271" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:20.271" endtime="20210906 01:59:20.919"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:20.923" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:20.919" endtime="20210906 01:59:20.923"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:20.270" endtime="20210906 01:59:20.923"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${check_LeaveS_ID_data2}</var>
+</assign>
+<msg timestamp="20210906 01:59:20.973" level="INFO">${check_LeaveS_ID_data2} = 3779</msg>
+<status status="PASS" starttime="20210906 01:59:20.924" endtime="20210906 01:59:20.973"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Be True</arg>
+<arg>'${check_LeaveS_ID_data}' != '${check_LeaveS_ID_data2}'</arg>
+</arguments>
+<assign>
+<var>${Fail}</var>
+</assign>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_LeaveS_ID_data}' != '${check_LeaveS_ID_data2}'</arg>
+</arguments>
+<msg timestamp="20210906 01:59:20.974" level="FAIL">''3779' != '3779'' should be true.</msg>
+<status status="FAIL" starttime="20210906 01:59:20.973" endtime="20210906 01:59:20.974"></status>
+</kw>
+<msg timestamp="20210906 01:59:20.974" level="INFO">${Fail} = False</msg>
+<status status="PASS" starttime="20210906 01:59:20.973" endtime="20210906 01:59:20.974"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${Fail}</arg>
+<arg>Log To Console</arg>
+<arg>This step ${Fail}!</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This step ${Fail}!</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:20.975" endtime="20210906 01:59:20.975"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:20.974" endtime="20210906 01:59:20.975"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>43_2_AfterDelete.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:21.109" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="43_2_AfterDelete.png"&gt;&lt;img src="43_2_AfterDelete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:20.976" endtime="20210906 01:59:21.109"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is False</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:21.109" endtime="20210906 01:59:21.110"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:07.080" endtime="20210906 01:59:21.110" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TC-LEAVE-EMP-044 P_Delete">
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:21.112" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:21.112" endtime="20210906 01:59:21.745"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:21.747" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:21.745" endtime="20210906 01:59:21.748"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:21.112" endtime="20210906 01:59:21.748"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:21.749" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 01:59:21.749" endtime="20210906 01:59:21.995"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:21.997" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 01:59:21.995" endtime="20210906 01:59:21.997"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:21.749" endtime="20210906 01:59:21.998"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:21.998" endtime="20210906 01:59:22.008"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="leaveTypes"]/label[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.009" level="INFO">Clicking element 'xpath=//*[@id="leaveTypes"]/label[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.009" endtime="20210906 01:59:22.047"></status>
+</kw>
+<kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<arguments>
+<arg>leaveType</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.048" level="INFO">Verifying radio button 'leaveType' has selection '2'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.047" endtime="20210906 01:59:22.077"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_from</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.078" level="INFO">Clicking element 'id=date_from'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.078" endtime="20210906 01:59:22.125"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.125" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.125" endtime="20210906 01:59:22.159"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.160" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.159" endtime="20210906 01:59:22.195"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.195" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.195" endtime="20210906 01:59:22.236"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_to</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.237" level="INFO">Clicking element 'id=date_to'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.236" endtime="20210906 01:59:22.279"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.279" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.279" endtime="20210906 01:59:22.308"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.308" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.308" endtime="20210906 01:59:22.340"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.341" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.341" endtime="20210906 01:59:22.375"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_from"]</arg>
+</arguments>
+<assign>
+<var>${check_dateFrom}</var>
+</assign>
+<msg timestamp="20210906 01:59:22.387" level="INFO">${check_dateFrom} = 08-09-2021</msg>
+<status status="PASS" starttime="20210906 01:59:22.375" endtime="20210906 01:59:22.387"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_to"]</arg>
+</arguments>
+<assign>
+<var>${check_dateTo}</var>
+</assign>
+<msg timestamp="20210906 01:59:22.398" level="INFO">${check_dateTo} = 08-09-2021</msg>
+<status status="PASS" starttime="20210906 01:59:22.387" endtime="20210906 01:59:22.398"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${year}</var>
+</assign>
+<msg timestamp="20210906 01:59:22.398" level="INFO">${year} = 2021</msg>
+<status status="PASS" starttime="20210906 01:59:22.398" endtime="20210906 01:59:22.398"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_dateFrom}' == '08-09-''${year}' and '${check_dateTo}' == '08-09-''${year}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:22.399" endtime="20210906 01:59:22.399"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=amount</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.399" level="INFO">Typing text '1' into text field 'id=amount'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.399" endtime="20210906 01:59:22.450"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=description</arg>
+<arg>Delete</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.451" level="INFO">Typing text 'Delete' into text field 'id=description'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.451" endtime="20210906 01:59:22.507"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="description"]</arg>
+</arguments>
+<assign>
+<var>${check_description}</var>
+</assign>
+<msg timestamp="20210906 01:59:22.520" level="INFO">${check_description} = Delete</msg>
+<status status="PASS" starttime="20210906 01:59:22.508" endtime="20210906 01:59:22.520"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_description}' == 'Delete'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:22.521" endtime="20210906 01:59:22.521"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.521" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.521" endtime="20210906 01:59:22.869"></status>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<doc>Waits until the current URL is ``expected``.</doc>
+<arguments>
+<arg>http://uat.cubesofttech.com/leavecalendar</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:22.870" endtime="20210906 01:59:22.873"></status>
+</kw>
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:22.874" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:22.874" endtime="20210906 01:59:23.496"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:23.503" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:23.497" endtime="20210906 01:59:23.503"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:22.874" endtime="20210906 01:59:23.503"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>1</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${check_Leave_ID}</var>
+</assign>
+<msg timestamp="20210906 01:59:23.537" level="INFO">${check_Leave_ID} = Leave ID</msg>
+<status status="PASS" starttime="20210906 01:59:23.504" endtime="20210906 01:59:23.537"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${check_LeaveS_ID_data}</var>
+</assign>
+<msg timestamp="20210906 01:59:23.570" level="INFO">${check_LeaveS_ID_data} = 3779</msg>
+<status status="PASS" starttime="20210906 01:59:23.537" endtime="20210906 01:59:23.570"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_Leave_ID}' == 'Leave ID'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:23.571" endtime="20210906 01:59:23.571"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>44_1_BeforeDelete.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:23.738" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="44_1_BeforeDelete.png"&gt;&lt;img src="44_1_BeforeDelete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:23.571" endtime="20210906 01:59:23.738"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[3]/div[1]/div/ul/li[2]/a</arg>
+</arguments>
+<msg timestamp="20210906 01:59:23.739" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[1]/div/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20210906 01:59:23.738" endtime="20210906 01:59:23.776"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[3]/div[1]/div/ul/li[2]/ul/li/a</arg>
+</arguments>
+<msg timestamp="20210906 01:59:23.777" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[1]/div/ul/li[2]/ul/li/a'.</msg>
+<status status="PASS" starttime="20210906 01:59:23.776" endtime="20210906 01:59:24.159"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Check All Calendar</arg>
+</arguments>
+<msg timestamp="20210906 01:59:24.163" level="INFO">Page title is 'Check All Calendar'.</msg>
+<status status="PASS" starttime="20210906 01:59:24.160" endtime="20210906 01:59:24.163"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210906 01:59:29.164" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210906 01:59:24.163" endtime="20210906 01:59:29.164"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div[3]/div[2]/div/div[2]/form/div/div[2]/div/div/div[2]/div/div[1]/div/div[2]/div/table/tbody/tr/td/div/div/div[2]/div[2]/table/tbody/tr[1]/td[3]/a/div/span[2]/i</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:29.164" endtime="20210906 01:59:29.180"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210906 01:59:34.182" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210906 01:59:29.180" endtime="20210906 01:59:34.182"></status>
+</kw>
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:34.183" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:34.182" endtime="20210906 01:59:34.811"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:34.814" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:34.811" endtime="20210906 01:59:34.815"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:34.182" endtime="20210906 01:59:34.815"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>${table}</arg>
+<arg>2</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${check_LeaveS_ID_data2}</var>
+</assign>
+<msg timestamp="20210906 01:59:34.855" level="INFO">${check_LeaveS_ID_data2} = 3779</msg>
+<status status="PASS" starttime="20210906 01:59:34.815" endtime="20210906 01:59:34.855"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Be True</arg>
+<arg>'${check_LeaveS_ID_data}' == '${check_LeaveS_ID_data2}'</arg>
+</arguments>
+<assign>
+<var>${Fail}</var>
+</assign>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_LeaveS_ID_data}' == '${check_LeaveS_ID_data2}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:34.855" endtime="20210906 01:59:34.856"></status>
+</kw>
+<msg timestamp="20210906 01:59:34.856" level="INFO">${Fail} = True</msg>
+<status status="PASS" starttime="20210906 01:59:34.855" endtime="20210906 01:59:34.856"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${Fail}</arg>
+<arg>Log To Console</arg>
+<arg>This step ${Fail}!</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:34.856" endtime="20210906 01:59:34.856"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>44_2_AfterDelete.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:34.997" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="44_2_AfterDelete.png"&gt;&lt;img src="44_2_AfterDelete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:34.856" endtime="20210906 01:59:34.998"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is Pass</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:34.998" endtime="20210906 01:59:34.998"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:21.111" endtime="20210906 01:59:34.999" critical="yes"></status>
+</test>
+<test id="s1-t4" name="TC-LEAVE-EMP-045 Forget_Input_TypeOfDayLeave">
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:35.000" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:35.000" endtime="20210906 01:59:35.651"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:35.656" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:35.651" endtime="20210906 01:59:35.656"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:35.000" endtime="20210906 01:59:35.656"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:35.657" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 01:59:35.657" endtime="20210906 01:59:35.915"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:35.918" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 01:59:35.915" endtime="20210906 01:59:35.918"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:35.657" endtime="20210906 01:59:35.918"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:35.918" endtime="20210906 01:59:35.930"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_from</arg>
+</arguments>
+<msg timestamp="20210906 01:59:35.931" level="INFO">Clicking element 'id=date_from'.</msg>
+<status status="PASS" starttime="20210906 01:59:35.931" endtime="20210906 01:59:35.978"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:35.979" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:35.978" endtime="20210906 01:59:36.024"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:36.025" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:36.025" endtime="20210906 01:59:36.062"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:36.062" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:36.062" endtime="20210906 01:59:36.104"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_to</arg>
+</arguments>
+<msg timestamp="20210906 01:59:36.105" level="INFO">Clicking element 'id=date_to'.</msg>
+<status status="PASS" starttime="20210906 01:59:36.105" endtime="20210906 01:59:36.146"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:36.147" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:36.147" endtime="20210906 01:59:36.179"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:36.180" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:36.180" endtime="20210906 01:59:36.217"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:36.217" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:36.217" endtime="20210906 01:59:36.261"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_from"]</arg>
+</arguments>
+<assign>
+<var>${check_dateFrom}</var>
+</assign>
+<msg timestamp="20210906 01:59:36.275" level="INFO">${check_dateFrom} = 08-09-2021</msg>
+<status status="PASS" starttime="20210906 01:59:36.262" endtime="20210906 01:59:36.275"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_to"]</arg>
+</arguments>
+<assign>
+<var>${check_dateTo}</var>
+</assign>
+<msg timestamp="20210906 01:59:36.297" level="INFO">${check_dateTo} = 08-09-2021</msg>
+<status status="PASS" starttime="20210906 01:59:36.276" endtime="20210906 01:59:36.297"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${year}</var>
+</assign>
+<msg timestamp="20210906 01:59:36.298" level="INFO">${year} = 2021</msg>
+<status status="PASS" starttime="20210906 01:59:36.297" endtime="20210906 01:59:36.298"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_dateFrom}' == '08-09-''${year}' and '${check_dateTo}' == '08-09-''${year}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:36.298" endtime="20210906 01:59:36.298"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=amount</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210906 01:59:36.298" level="INFO">Typing text '1' into text field 'id=amount'.</msg>
+<status status="PASS" starttime="20210906 01:59:36.298" endtime="20210906 01:59:36.351"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:36.351" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:36.351" endtime="20210906 01:59:36.402"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>Please select one of these options.</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:36.403" endtime="20210906 01:59:36.415"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210906 01:59:39.415" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210906 01:59:36.415" endtime="20210906 01:59:39.415"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is Pass</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:39.415" endtime="20210906 01:59:39.416"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>45_TypeOfDayLeave.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:39.590" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="45_TypeOfDayLeave.png"&gt;&lt;img src="45_TypeOfDayLeave.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:39.416" endtime="20210906 01:59:39.590"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:34.999" endtime="20210906 01:59:39.591" critical="yes"></status>
+</test>
+<test id="s1-t5" name="TC-LEAVE-EMP-046 Forget_Input_Duration">
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:39.594" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:39.594" endtime="20210906 01:59:40.235"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:40.240" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:40.235" endtime="20210906 01:59:40.241"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:39.593" endtime="20210906 01:59:40.241"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:40.242" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 01:59:40.242" endtime="20210906 01:59:40.476"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:40.479" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 01:59:40.476" endtime="20210906 01:59:40.479"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:40.241" endtime="20210906 01:59:40.479"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:40.479" endtime="20210906 01:59:40.488"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="leaveTypes"]/label[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:40.488" level="INFO">Clicking element 'xpath=//*[@id="leaveTypes"]/label[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:40.488" endtime="20210906 01:59:40.534"></status>
+</kw>
+<kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<arguments>
+<arg>leaveType</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210906 01:59:40.535" level="INFO">Verifying radio button 'leaveType' has selection '2'.</msg>
+<status status="PASS" starttime="20210906 01:59:40.535" endtime="20210906 01:59:40.570"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=amount</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210906 01:59:40.571" level="INFO">Typing text '1' into text field 'id=amount'.</msg>
+<status status="PASS" starttime="20210906 01:59:40.571" endtime="20210906 01:59:40.632"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:40.632" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:40.632" endtime="20210906 01:59:40.684"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>Please fill out this field.</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:40.684" endtime="20210906 01:59:40.697"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210906 01:59:43.700" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210906 01:59:40.698" endtime="20210906 01:59:43.700"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is Pass</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:43.700" endtime="20210906 01:59:43.701"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>46_Duration.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:43.841" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="46_Duration.png"&gt;&lt;img src="46_Duration.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:43.701" endtime="20210906 01:59:43.841"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:39.593" endtime="20210906 01:59:43.842" critical="yes"></status>
+</test>
+<test id="s1-t6" name="TC-LEAVE-EMP-047 Forget_Input_HalfDayLeave">
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:43.845" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:43.844" endtime="20210906 01:59:44.486"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:44.490" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:44.486" endtime="20210906 01:59:44.490"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:43.843" endtime="20210906 01:59:44.490"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:44.491" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 01:59:44.491" endtime="20210906 01:59:44.739"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:44.742" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 01:59:44.739" endtime="20210906 01:59:44.742"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:44.491" endtime="20210906 01:59:44.742"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:44.742" endtime="20210906 01:59:44.751"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="leaveTypes"]/label[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:44.751" level="INFO">Clicking element 'xpath=//*[@id="leaveTypes"]/label[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:44.751" endtime="20210906 01:59:44.793"></status>
+</kw>
+<kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<arguments>
+<arg>leaveType</arg>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210906 01:59:44.794" level="INFO">Verifying radio button 'leaveType' has selection '5'.</msg>
+<status status="PASS" starttime="20210906 01:59:44.794" endtime="20210906 01:59:44.838"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_from</arg>
+</arguments>
+<msg timestamp="20210906 01:59:44.839" level="INFO">Clicking element 'id=date_from'.</msg>
+<status status="PASS" starttime="20210906 01:59:44.839" endtime="20210906 01:59:44.886"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:44.887" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:44.887" endtime="20210906 01:59:44.922"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:44.922" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:44.922" endtime="20210906 01:59:44.961"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:44.961" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:44.961" endtime="20210906 01:59:45.006"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_to</arg>
+</arguments>
+<msg timestamp="20210906 01:59:45.007" level="INFO">Clicking element 'id=date_to'.</msg>
+<status status="PASS" starttime="20210906 01:59:45.007" endtime="20210906 01:59:45.052"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:45.053" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:45.053" endtime="20210906 01:59:45.084"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:45.085" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:45.084" endtime="20210906 01:59:45.120"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:45.121" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:45.120" endtime="20210906 01:59:45.157"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_from"]</arg>
+</arguments>
+<assign>
+<var>${check_dateFrom}</var>
+</assign>
+<msg timestamp="20210906 01:59:45.170" level="INFO">${check_dateFrom} = 08-09-2021</msg>
+<status status="PASS" starttime="20210906 01:59:45.157" endtime="20210906 01:59:45.170"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_to"]</arg>
+</arguments>
+<assign>
+<var>${check_dateTo}</var>
+</assign>
+<msg timestamp="20210906 01:59:45.182" level="INFO">${check_dateTo} = 08-09-2021</msg>
+<status status="PASS" starttime="20210906 01:59:45.170" endtime="20210906 01:59:45.182"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%Y</arg>
+</arguments>
+<assign>
+<var>${year}</var>
+</assign>
+<msg timestamp="20210906 01:59:45.182" level="INFO">${year} = 2021</msg>
+<status status="PASS" starttime="20210906 01:59:45.182" endtime="20210906 01:59:45.182"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_dateFrom}' == '08-09-''${year}' and '${check_dateTo}' == '08-09-''${year}'</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:45.182" endtime="20210906 01:59:45.183"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=amount</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210906 01:59:45.183" level="INFO">Typing text '1' into text field 'id=amount'.</msg>
+<status status="PASS" starttime="20210906 01:59:45.183" endtime="20210906 01:59:45.231"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:45.232" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:45.232" endtime="20210906 01:59:45.583"></status>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<doc>Waits until the current URL is ``expected``.</doc>
+<arguments>
+<arg>http://uat.cubesofttech.com/leavecalendar</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:45.583" endtime="20210906 01:59:45.591"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is Pass</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:45.591" endtime="20210906 01:59:45.591"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>47_HalfDayLeave.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:45.724" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="47_HalfDayLeave.png"&gt;&lt;img src="47_HalfDayLeave.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:45.592" endtime="20210906 01:59:45.724"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:43.843" endtime="20210906 01:59:45.724" critical="yes"></status>
+</test>
+<test id="s1-t7" name="TC-LEAVE-EMP-048 Forget_Input_Description">
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:45.726" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:45.726" endtime="20210906 01:59:46.377"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.381" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.377" endtime="20210906 01:59:46.381"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:45.726" endtime="20210906 01:59:46.381"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.383" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.382" endtime="20210906 01:59:46.618"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.621" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.618" endtime="20210906 01:59:46.621"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:46.382" endtime="20210906 01:59:46.621"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:46.621" endtime="20210906 01:59:46.631"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="leaveTypes"]/label[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.631" level="INFO">Clicking element 'xpath=//*[@id="leaveTypes"]/label[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.631" endtime="20210906 01:59:46.677"></status>
+</kw>
+<kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<arguments>
+<arg>leaveType</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.677" level="INFO">Verifying radio button 'leaveType' has selection '2'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.677" endtime="20210906 01:59:46.709"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_from</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.710" level="INFO">Clicking element 'id=date_from'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.709" endtime="20210906 01:59:46.753"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.753" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.753" endtime="20210906 01:59:46.781"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.782" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.782" endtime="20210906 01:59:46.815"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.816" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.816" endtime="20210906 01:59:46.855"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_to</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.855" level="INFO">Clicking element 'id=date_to'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.855" endtime="20210906 01:59:46.894"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.895" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.895" endtime="20210906 01:59:46.924"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.925" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.924" endtime="20210906 01:59:46.957"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.957" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.957" endtime="20210906 01:59:46.992"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=amount</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210906 01:59:46.993" level="INFO">Typing text '1' into text field 'id=amount'.</msg>
+<status status="PASS" starttime="20210906 01:59:46.992" endtime="20210906 01:59:47.040"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=reason</arg>
+<arg>เป็นส่วนหนึ่งในการทดสอบการแจ้งเตือน</arg>
+</arguments>
+<msg timestamp="20210906 01:59:47.041" level="INFO">Typing text 'เป็นส่วนหนึ่งในการทดสอบการแจ้งเตือน' into text field 'id=reason'.</msg>
+<status status="PASS" starttime="20210906 01:59:47.041" endtime="20210906 01:59:47.111"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:47.111" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:47.111" endtime="20210906 01:59:47.423"></status>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<doc>Waits until the current URL is ``expected``.</doc>
+<arguments>
+<arg>http://uat.cubesofttech.com/leavecalendar</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:47.424" endtime="20210906 01:59:47.431"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is Pass</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:47.432" endtime="20210906 01:59:47.432"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>48_Description.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:47.552" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="48_Description.png"&gt;&lt;img src="48_Description.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:47.432" endtime="20210906 01:59:47.552"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:45.725" endtime="20210906 01:59:47.553" critical="yes"></status>
+</test>
+<test id="s1-t8" name="TC-LEAVE-EMP-049 Forget_Input_Reason">
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:47.555" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:47.555" endtime="20210906 01:59:48.194"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.201" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.195" endtime="20210906 01:59:48.201"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:47.555" endtime="20210906 01:59:48.201"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.202" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.202" endtime="20210906 01:59:48.451"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.453" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.451" endtime="20210906 01:59:48.453"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:48.201" endtime="20210906 01:59:48.453"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:48.454" endtime="20210906 01:59:48.463"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="leaveTypes"]/label[3]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.463" level="INFO">Clicking element 'xpath=//*[@id="leaveTypes"]/label[3]'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.463" endtime="20210906 01:59:48.500"></status>
+</kw>
+<kw name="Radio Button Should Be Set To" library="SeleniumLibrary">
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<arguments>
+<arg>leaveType</arg>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.501" level="INFO">Verifying radio button 'leaveType' has selection '3'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.500" endtime="20210906 01:59:48.525"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_from</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.525" level="INFO">Clicking element 'id=date_from'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.525" endtime="20210906 01:59:48.569"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.570" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.569" endtime="20210906 01:59:48.601"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.602" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.602" endtime="20210906 01:59:48.635"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.636" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.636" endtime="20210906 01:59:48.677"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_to</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.678" level="INFO">Clicking element 'id=date_to'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.677" endtime="20210906 01:59:48.727"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.727" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/thead/tr[2]/th[2]'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.727" endtime="20210906 01:59:48.770"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.770" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[2]/table/tbody/tr/td/span[9]'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.770" endtime="20210906 01:59:48.803"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.804" level="INFO">Clicking element 'xpath=/html/body/div[5]/div[1]/table/tbody/tr[2]/td[4]'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.803" endtime="20210906 01:59:48.839"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=amount</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.839" level="INFO">Typing text '1' into text field 'id=amount'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.839" endtime="20210906 01:59:48.906"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=description</arg>
+<arg>TC-LEAVE-049</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.907" level="INFO">Typing text 'TC-LEAVE-049' into text field 'id=description'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.906" endtime="20210906 01:59:48.968"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:48.969" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:48.969" endtime="20210906 01:59:49.281"></status>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<doc>Waits until the current URL is ``expected``.</doc>
+<arguments>
+<arg>http://uat.cubesofttech.com/leavecalendar</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:49.282" endtime="20210906 01:59:49.286"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is Pass</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:49.286" endtime="20210906 01:59:49.286"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>49_Reason.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:49.412" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="49_Reason.png"&gt;&lt;img src="49_Reason.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:49.286" endtime="20210906 01:59:49.412"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:47.554" endtime="20210906 01:59:49.412" critical="yes"></status>
+</test>
+<test id="s1-t9" name="TC-LEAVE-EMP-050 Forget_Input_All">
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:49.414" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:49.414" endtime="20210906 01:59:50.053"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:50.057" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:50.054" endtime="20210906 01:59:50.057"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:49.413" endtime="20210906 01:59:50.057"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:50.058" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 01:59:50.058" endtime="20210906 01:59:50.263"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:50.267" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 01:59:50.263" endtime="20210906 01:59:50.267"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:50.058" endtime="20210906 01:59:50.267"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:50.268" endtime="20210906 01:59:50.275"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:50.275" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:50.275" endtime="20210906 01:59:50.310"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>Please select one of these options.</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:50.312" endtime="20210906 01:59:50.327"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210906 01:59:53.328" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210906 01:59:50.328" endtime="20210906 01:59:53.328"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is Pass</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:53.328" endtime="20210906 01:59:53.329"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>50_All.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:53.472" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="50_All.png"&gt;&lt;img src="50_All.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:53.329" endtime="20210906 01:59:53.472"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:49.413" endtime="20210906 01:59:53.473" critical="yes"></status>
+</test>
+<test id="s1-t10" name="TC-LEAVE-EMP-051 Input_Duration_By_Keyboard">
+<kw name="IT Click MyLeave Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@href="myleave_list?Id=${it_login}"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:53.475" level="INFO">Clicking element 'xpath://*[@href="myleave_list?Id=test_it_roles"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:53.475" endtime="20210906 01:59:54.103"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>My leave list</arg>
+</arguments>
+<msg timestamp="20210906 01:59:54.107" level="INFO">Page title is 'My leave list'.</msg>
+<status status="PASS" starttime="20210906 01:59:54.103" endtime="20210906 01:59:54.107"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:53.475" endtime="20210906 01:59:54.107"></status>
+</kw>
+<kw name="Click Add Leave">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>addLeave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:54.108" level="INFO">Clicking button 'addLeave'.</msg>
+<status status="PASS" starttime="20210906 01:59:54.108" endtime="20210906 01:59:54.320"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Add Leave</arg>
+</arguments>
+<msg timestamp="20210906 01:59:54.322" level="INFO">Page title is 'Add Leave'.</msg>
+<status status="PASS" starttime="20210906 01:59:54.320" endtime="20210906 01:59:54.322"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:54.107" endtime="20210906 01:59:54.323"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${it_name}</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:54.323" endtime="20210906 01:59:54.330"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_from</arg>
+<arg>08-09-2021</arg>
+</arguments>
+<msg timestamp="20210906 01:59:54.331" level="INFO">Typing text '08-09-2021' into text field 'id=date_from'.</msg>
+<status status="PASS" starttime="20210906 01:59:54.331" endtime="20210906 01:59:54.457"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=date_to</arg>
+<arg>08-09-2021</arg>
+</arguments>
+<msg timestamp="20210906 01:59:54.457" level="INFO">Typing text '08-09-2021' into text field 'id=date_to'.</msg>
+<status status="PASS" starttime="20210906 01:59:54.457" endtime="20210906 01:59:54.614"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_from"]</arg>
+</arguments>
+<assign>
+<var>${check_dateFrom}</var>
+</assign>
+<msg timestamp="20210906 01:59:54.629" level="INFO">${check_dateFrom} = 08-09-2</msg>
+<status status="PASS" starttime="20210906 01:59:54.615" endtime="20210906 01:59:54.629"></status>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="date_to"]</arg>
+</arguments>
+<assign>
+<var>${check_dateTo}</var>
+</assign>
+<msg timestamp="20210906 01:59:54.650" level="INFO">${check_dateTo} = 08-09-2021</msg>
+<status status="PASS" starttime="20210906 01:59:54.629" endtime="20210906 01:59:54.650"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Should Be True</arg>
+<arg>'${check_dateFrom}' == '08-09-2021' and '${check_dateTo}' == '08-09-2021'</arg>
+</arguments>
+<assign>
+<var>${Fail}</var>
+</assign>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>'${check_dateFrom}' == '08-09-2021' and '${check_dateTo}' == '08-09-2021'</arg>
+</arguments>
+<msg timestamp="20210906 01:59:54.651" level="FAIL">''08-09-2' == '08-09-2021' and '08-09-2021' == '08-09-2021'' should be true.</msg>
+<status status="FAIL" starttime="20210906 01:59:54.651" endtime="20210906 01:59:54.652"></status>
+</kw>
+<msg timestamp="20210906 01:59:54.652" level="INFO">${Fail} = False</msg>
+<status status="PASS" starttime="20210906 01:59:54.650" endtime="20210906 01:59:54.652"></status>
+</kw>
+<kw name="Run Keyword Unless" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments if ``condition`` is false.</doc>
+<arguments>
+<arg>${Fail}</arg>
+<arg>Log To Console</arg>
+<arg>This step ${Fail}!</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This step ${Fail}!</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:54.652" endtime="20210906 01:59:54.653"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:54.652" endtime="20210906 01:59:54.653"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@class="btn btn-sm blue-soft"]</arg>
+</arguments>
+<msg timestamp="20210906 01:59:54.653" level="INFO">Clicking element 'xpath=//*[@class="btn btn-sm blue-soft"]'.</msg>
+<status status="PASS" starttime="20210906 01:59:54.653" endtime="20210906 01:59:54.714"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<arguments>
+<arg>Please select one of these options.</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:54.715" endtime="20210906 01:59:54.722"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210906 01:59:57.723" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210906 01:59:54.722" endtime="20210906 01:59:57.723"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>This Test Case Is False</arg>
+</arguments>
+<status status="PASS" starttime="20210906 01:59:57.723" endtime="20210906 01:59:57.725"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>50_All.png</arg>
+</arguments>
+<msg timestamp="20210906 01:59:57.874" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="50_All.png"&gt;&lt;img src="50_All.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210906 01:59:57.725" endtime="20210906 01:59:57.874"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210906 01:59:57.874" endtime="20210906 02:00:00.020"></status>
+</kw>
+<status status="PASS" starttime="20210906 01:59:53.474" endtime="20210906 02:00:00.021" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210906 01:58:42.867" endtime="20210906 02:00:00.022"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0">Critical Tests</stat>
+<stat pass="10" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="10" fail="0" id="s1" name="MyLeave TC 43 51 etc">MyLeave TC 43 51 etc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
